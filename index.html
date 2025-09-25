@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Controle Comercial</title>
+  <meta name="description" content="Demonstração de Tabela de Controle e Feedback do time Comercial — standalone para iPad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <main id="conteudo" class="container" role="main" aria-label="Tabela de controle e feedback do time comercial">
+    <header class="page-header" role="banner">
+      <h1 class="titulo">Controle &amp; Feedback </h1>
+      <p class="subtitulo">
+        Organize o status dos leads e gere feedback justo no fim de cada semestre.
+      </p>
+    </header>
+
+    <section class="card" aria-labelledby="titulo-tabela">
+      <h2 id="titulo-tabela" class="sr-only">Tabela de status de leads</h2>
+
+      <div class="toolbar"></div>
+
+      <div class="table-responsive" role="region" aria-label="Lista de leads com métricas de desempenho" tabindex="0">
+        <table class="tabela-comercial" role="table">
+          <caption class="table-caption">
+            Status do funil + métricas de esforço e constância (demonstração)
+          </caption>
+
+          <thead>
+            <tr role="row">
+              <th scope="col">Lead</th>
+              <th scope="col">Empresa</th>
+              <th scope="col">Etapa do Funil</th>
+              <th scope="col">Último Contato</th>
+              <th scope="col">Resp. Positivas</th>
+              <th scope="col">Ações Realizadas</th>
+              <th scope="col">Constância</th>
+              <th scope="col">Responsável</th>
+              <th scope="col">Próxima Ação</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr data-etapa="Prospecção" data-status="Em aberto">
+              <td>Maria Silva</td>
+              <td>Alfa Tech</td>
+              <td><span class="badge etapa etapa-prospeccao">Prospecção</span></td>
+              <td>10/09/2025</td>
+              <td>0</td>
+              <td>2 ligações, 1 e-mail</td>
+              <td><span class="tag constancia baixa"><i class="ri-timer-line" aria-hidden="true"></i> 3d</span></td>
+              <td>Luigi Lima</td>
+              <td>Agendar 1ª reunião</td>
+              <td><span class="status pendente">Pendente</span></td>
+            </tr>
+
+            <tr data-etapa="Reunião" data-status="Em negociação">
+              <td>Carlos Nunes</td>
+              <td>Beta Solutions</td>
+              <td><span class="badge etapa etapa-reuniao">Reunião</span></td>
+              <td>12/09/2025</td>
+              <td>1</td>
+              <td>1 reunião, 1 follow-up</td>
+              <td><span class="tag constancia media"><i class="ri-timer-line" aria-hidden="true"></i> 7d</span></td>
+              <td>Guilherme Mais</td>
+              <td>Enviar proposta</td>
+              <td><span class="status negociacao">Em negociação</span></td>
+            </tr>
+
+            <tr data-etapa="Proposta enviada" data-status="Em negociação">
+              <td>Ana Rocha</td>
+              <td>Gamma Labs</td>
+              <td><span class="badge etapa etapa-proposta">Proposta enviada</span></td>
+              <td>09/09/2025</td>
+              <td>2</td>
+              <td>Proposta + 2 e-mails</td>
+              <td><span class="tag constancia alta"><i class="ri-timer-line" aria-hidden="true"></i> 12d</span></td>
+              <td>João Ferreira</td>
+              <td>Follow-up com comparativo</td>
+              <td><span class="status negociacao">Em negociação</span></td>
+            </tr>
+
+            <tr data-etapa="Fechado" data-status="Ganho">
+              <td>Ricardo Paz</td>
+              <td>Delta Inc.</td>
+              <td><span class="badge etapa etapa-fechado">Fechado</span></td>
+              <td>01/09/2025</td>
+              <td>3</td>
+              <td>3 reuniões, 4 e-mails</td>
+              <td><span class="tag constancia baixa"><i class="ri-timer-line" aria-hidden="true"></i> 2d</span></td>
+              <td>Guilherme Mais</td>
+              <td>Onboarding</td>
+              <td><span class="status ganho"><i class="ri-check-line" aria-hidden="true"></i> Ganho</span></td>
+            </tr>
+
+            <tr data-etapa="Fechado" data-status="Perdido">
+              <td>Julia Moraes</td>
+              <td>Epsilon Co.</td>
+              <td><span class="badge etapa etapa-fechado">Fechado</span></td>
+              <td>28/08/2025</td>
+              <td>1</td>
+              <td>1 reunião, 3 e-mails</td>
+              <td><span class="tag constancia media"><i class="ri-timer-line" aria-hidden="true"></i> 6d</span></td>
+              <td>Luigi Lima</td>
+              <td>Registrar motivos</td>
+              <td><span class="status perdido"><i class="ri-close-line" aria-hidden="true"></i> Perdido</span></td>
+            </tr>
+            <tr data-etapa="Reuni&#227;o" data-status="Em negocia&#231;&#227;o">
+              <td>Paula Menezes</td>
+              <td>Zeta Digitais</td>
+              <td><span class="badge etapa etapa-reuniao">Reuni&#227;o</span></td>
+              <td>07/09/2025</td>
+              <td>2</td>
+              <td>2 reuni&#245;es, 1 proposta</td>
+              <td><span class="tag constancia alta"><i class="ri-timer-line" aria-hidden="true"></i> 9d</span></td>
+              <td>Joao Ferreira</td>
+              <td>Ajustar condi&#231;&#245;es comerciais</td>
+              <td><span class="status negociacao">Em negocia&#231;&#227;o</span></td>
+            </tr>
+
+            <tr data-etapa="Prospec&#231;&#227;o" data-status="Em aberto">
+              <td>Eduardo Lima</td>
+              <td>Nova Aurora</td>
+              <td><span class="badge etapa etapa-prospeccao">Prospec&#231;&#227;o</span></td>
+              <td>05/09/2025</td>
+              <td>0</td>
+              <td>1 liga&#231;&#227;o, 1 e-mail</td>
+              <td><span class="tag constancia baixa"><i class="ri-timer-line" aria-hidden="true"></i> 4d</span></td>
+              <td>Mariana Reis</td>
+              <td>Agendar call introdut&#243;ria</td>
+              <td><span class="status pendente">Pendente</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="nota">
+        <strong>Dica:</strong> No fim do semestre, use as colunas
+        <em>Respostas Positivas</em>, <em>Ações Realizadas</em> e <em>Constância</em>
+        para reconhecer quem manteve esforço e consistência — não só quem fechou.
+      </p>
+    </section>
+
+    <section class="observations" aria-labelledby="observations-title">
+      <header class="observations-header">
+        <h2 id="observations-title">Painel de observacoes</h2>
+        <p class="observations-subtitle">Registre notas para cada lead, organize repasses e fortalece o acompanhamento executivo.</p>
+      </header>
+      <ol class="observations-list" id="observations-grid" role="list" aria-live="polite"></ol>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
